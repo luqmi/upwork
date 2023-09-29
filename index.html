@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            width: 100%;
+            background: #F4EEEE;
+
+        }
+
+        .box1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: #F4EEEE;
+        }
+
+        .box1 .left {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        .box1 .left h1 {
+            font-weight: bold;
+            color: #2c8a0a;
+        }
+
+        ul {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        .box1 .right {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .box2 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: #F4EEEE;
+            padding: 20px;
+        }
+
+        .box2 a {
+            position: relative;
+            left: 3%;
+            text-decoration: none;
+            color: black;
+            text-transform: capitalize;
+            margin-left: 1%;
+        }
+
+        .box2 a:hover {
+            text-decoration: underline;
+        }
+
+        select {
+            margin-left: 5%;
+            padding: 5px;
+            border: none;
+            text-transform: capitalize;
+            border-radius: 25px;
+        }
+
+        .ent {
+            margin-left: 4%;
+        }
+
+        ::placeholder {
+            font-weight: bold;
+            color: #000;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        .right button {
+            width: 20%;
+            padding: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .right .sgn {
+            color: #F4EEEE;
+            background: #11992e;
+            font-weight: bold;
+            border: none;
+        }
+
+        .right .sgn:hover {
+            background: #12b335;
+
+        }
+
+        .right .lg {
+            border: none;
+        }
+
+        .box3 {
+            width: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: auto;
+            background: rgb(242, 245, 242);
+            border-radius: 25px;
+            height: 60vh;
+        }
+
+        .lft {
+            width: 40%;
+            height: 60vh;
+            margin-top: 5%;
+        }
+
+        .lft h1 {
+            margin-top: -3%;
+            color: rgb(10, 153, 10);
+            font-size: 80px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .lft p {
+            color: gray;
+            font-size: 25px;
+            margin-top: -5%;
+            font-weight: bold;
+        }
+
+        .lft button {
+            width: 25%;
+            font-size: 15px;
+            background: rgb(10, 153, 10);
+            color: #e4ebe4;
+            border: none;
+            margin-top: 2%;
+            padding: 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lft button:hover {
+            background: rgb(22, 196, 22);
+
+        }
+
+        .rgt {
+            width: 53%;
+            height: 60vh;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 10px;
+            border: 2px solid rgb(217, 222, 224);
+        }
+
+        .rgt img {
+            width: 100%;
+            height: 40vh;
+            margin-top: 15%;
+
+        }
+
+        .lft .img1 {
+            width: 15%;
+            /* height: 9vh; */
+            border: none;
+        }
+
+        .lft .img2 {
+            width: 15%;
+            border: none;
+            margin-top: -5%;
+            height: 8vh;
+            margin-left: 2%;
+        }
+
+        .lft .img3 {
+            width: 20%;
+            height: 8vh;
+            margin-left: 2%;
+        }
+
+        .lft h2 {
+            color: gray;
+            font-size: 20px;
+            margin-top: 15%;
+        }
+
+        .box4 {
+            width: 100%;
+            /* background: #000; */
+            color: #e4ebe4;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .box4lft {
+            width: 40%;
+            /* border: 2px solid goldenrod; */
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+
+        .box4rgt {
+            width: 40%;
+            /* border: 2px solid red ; */
+            color: gray;
+            margin-top: 3.5%;
+            margin-right: 15%;
+        }
+
+        .box4rgt span {
+            color: #000;
+            font-size: 25px;
+        }
+
+        .box4rgt h1 {
+            color: #000;
+        }
+
+        .box4rgt button {
+            width: 30%;
+            padding: 10px;
+            border-radius: 25px;
+            text-align: center;
+            margin-top: 5%;
+            border: none;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .box4rgt .one {
+            background: #0b8826;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        .box4rgt .one:hover {
+            background: #1edd47;
+
+        }
+
+        .box4rgt .two {
+            margin-left: 5%;
+            border: 2px solid #16b137;
+            color: #16b137;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+        .box5 {
+            width: 40%;
+            margin-top: 5%;
+            margin-left: 6%;
+            color: gray;
+            /* background: #a35a5a; */
+        }
+
+        .box5 h1 {
+            color: #1b1515;
+            font-size: 45px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .box5 a {
+            color: #135c23;
+        }
+
+        .box7 {
+            width: 90%;
+            min-height: 10vh;
+
+            /* background: lightgreen; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .box6 {
+            width: 90%;
+            min-height: 10vh;
+            /* background: rgb(6, 221, 6); */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .bag {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /* background:brown; */
+        }
+
+        .b1 {
+            padding: 50px;
+        }
+
+        .b2 {
+            padding: 50px;
+        }
+
+        .b3 {
+            padding: 50px;
+        }
+
+        .b4 {
+            padding: 50px;
+        }
+
+        .b1:hover {
+            background: lavender;
+            cursor: pointer;
+        }
+
+        .b2:hover {
+            background: lavender;
+            cursor: pointer;
+        }
+
+        .b3:hover {
+            background: lavender;
+            cursor: pointer;
+        }
+
+        .b4:hover {
+            background: lavender;
+            cursor: pointer;
+        }
+
+        .box8 {
+            width: 100%;
+            height: 70vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: #e4ebe4;
+            /* background: #000;     */
+        }
+
+        .box8lft {
+            width: 70%;
+            height: 60vh;
+            margin-left: 5%;
+            background: #17594A;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .box8lft ul {
+            width: 100%;
+
+            display: block;
+            list-style: none;
+            font-size: 20px;
+            color: #F4EEEE;
+
+        }
+
+        .box8lft li:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        .box8lft li:before {
+            content: "\2764";
+            color: #A0D8B3;
+            margin-right: 1%;
+        }
+
+        .box8lft h2 {
+            margin-left: 5%;
+
+        }
+
+        .box8lft h1 {
+            font-size: 55px;
+            color: #A0D8B3;
+            margin-left: 5%;
+        }
+
+        .box8lft span {
+            color: #F4EEEE;
+        }
+
+        .box8lft p {
+            margin-left: 5%;
+
+            font-size: 20px;
+            color: #F4EEEE;
+        }
+
+        .box8lft button {
+            width: 15%;
+            padding: 10px;
+            color: #2c8a0a;
+            border-radius: 25px;
+            margin-top: 2%;
+            margin-left: 5%;
+            border: none;
+            font-size: 15px;
+
+        }
+
+        .box8rgt {
+            display: flex;
+            align-items: center;
+            background: #792020;
+            width: 40%;
+            height: 60vh;
+            margin-right: 5%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .box8rgt img {
+            width: 100%;
+            height: 60vh;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+        .box9 {
+            width: 90%;
+            height: 60vh;
+            color: #F4EEEE;
+            background-image: url("../assignment 1/images/money.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.9;
+            margin-left: 5%;
+            margin-right: 5%;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .boxes {
+            width: 95%;
+            margin-top: 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* background: #000; */
+            position: relative;
+            bottom: start;
+        }
+
+        .bx1 {
+            width: 30%;
+            background:#0b8826;
+            border-radius: 10px;
+        }
+
+        .bx2 {
+            width: 30%;
+            background: #0b8826;
+            border-radius: 10px;
+        }
+
+        .bx3 {
+            width: 30%;
+            background: #0b8826;
+            border-radius: 10px;
+        }
+
+        .inbox9 {
+            width: 90%;
+            /* background: lightblue; */
+            position: relative;
+            top: 5%;
+            left: 1%;
+            right: 4%;
+        }
+        h2{
+        font-weight: bold;
+            margin-left:5%;
+        }
+
+        .inbox9 p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .box9h {
+            font-size: 4rem;
+        }
+
+        .bx1 h1 {
+            font-size: 35px;
+        }
+.bx1,.bx2,.bx3,h1,p{
+    margin-left: 4%;
+    font-weight: bold;
+}
+        .bx2 h1 {
+            font-size: 35px;
+        }
+
+        .bx3 h1 {
+            font-size: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="box1">
+            <div class="left">
+                <h1>Upwork</h1>
+                <ul>
+                    <li>
+                        <select>
+                            <OPTIOn> find talent</OPTIOn>
+                            <option>post a job</option>
+                            <option>buy a project</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select>
+                            <OPtion> find work</OPtion>
+
+                        </select>
+                    </li>
+                    <li>
+                        <select>
+                            <OPtion>why upwork </OPtion>
+                        </select>
+                    </li>
+                    <li class="ent">Enterprise</li>
+                </ul>
+            </div>
+            <div class="right">
+                <input type="text" placeholder="search">
+                <select>
+                    <option value="">talent</option>
+                </select>
+                <button class="lg">Log in</button>
+                <button class="sgn">Sign up</button>
+            </div>
+        </nav>
+        <div class="box2">
+            <a href="">talent marketplace</a>
+            <a href="">Development & IT</a>
+            <a href="">Design & creative</a>
+            <a href="">sale & marketing</a>
+            <a href="">writing & Translation</a>
+            <a href="">Admin & Customer Support</a>
+            <a href="">Finance & Accounting</a>
+            <select>
+                <option> <a href="">More</a></option>
+                <option value="">Engineering Architecture</option>
+                <option value="">HR & Training</option>
+                <option value="">Legal</option>
+            </select>
+        </div>
+        <div class="box3">
+            <div class="lft">
+                <h1>
+                    How Work<br><span>Should Work</span>
+                </h1>
+                <p>
+                    Forget the old rules. You can have the best people.<br>
+                    Right now. Right here.
+                </p>
+                <button>Get Started</button>
+                <h2>Trusted By</h2>
+                <img class="img1" src="../assignment 1/images/micro.png" alt="not found">
+                <img class="img2" src="../assignment 1/images/airbnb.png" alt="not found">
+                <img class="img3" src="../assignment 1/images/blssel.png" alt="not found">
+            </div>
+            <div class="rgt">
+                <img src="../assignment 1/images/audi.png" alt="not found">
+
+            </div>
+        </div>
+        <div class="box4">
+            <div class="box4lft">
+                <img src="../assignment 1/images/GIF.gif" alt="not found">
+            </div>
+            <div class="box4rgt">
+                <h1>Up your work game, it’s easy</h1>
+                <p>
+                    <span> No cost to join </span> <br>
+                    Register and browse professionals, explore projects, or even book a consultation.
+                    <br><br>
+                    <span> Post a job and hire top talent </span> <br>
+                    Finding talent doesn’t have to be a chore. Post a job or we can search for you!
+                    <br><br>
+                    <span> Work with the best—without breaking the bank </span> <br>
+                    Upwork makes it affordable to up your work and take advantage of low transaction rates.
+                </p>
+
+                <button class="one">Sign Up for free</button>
+                <button class="two">learn how to hire</button>
+
+            </div>
+        </div>
+        <div class="box5">
+            <p>
+            <h1> Browse talent by category </h1>
+            Looking for work? <a href=""> Browse jobs </a>
+            </p>
+        </div>
+        <div class="box6">
+            <div class="b1">
+                <h2>Development & IT</h2>
+                <div class="bag">
+                    <span>4.85/5</span>
+                    <span>1853 skills</span>
+                </div>
+            </div>
+            <div class="b2">
+                <h2>AI & Services</h2>
+                <div class="bag">
+                    <span>4.8/5</span>
+                    <span>294 skills</span>
+                </div>
+            </div>
+            <div class="b3">
+                <h2>Design 7 Creative</h2>
+                <div class="bag">
+                    <span>4.91/5</span>
+                    <span>968 skills</span>
+                </div>
+            </div>
+            <div class="b4">
+                <h2>Sales & Marketing</h2>
+                <div class="bag">
+                    <span>4.77/5</span>
+                    <span>392 skills</span>
+                </div>
+            </div>
+        </div>
+        <div class="box7">
+            <div class="b1">
+                <h2>Writing & Translation</h2>
+                <div class="bag">
+                    <span>4.92/5</span>
+                    <span>505 skills</span>
+                </div>
+            </div>
+            <div class="b2">
+                <h2>Admin & Customer <br>Support</h2>
+                <div class="bag">
+                    <span>4.77/5</span>
+                    <span>508 skills</span>
+                </div>
+            </div>
+            <div class="b3">
+                <h2>Finance & Accounting</h2>
+                <div class="bag">
+                    <span>4.79/5</span>
+                    <span>214 skills</span>
+                </div>
+            </div>
+            <div class="b4">
+                <h2>Engineering & <br>Architecture</h2>
+                <div class="bag">
+                    <span>4.85/5</span>
+                    <span>650 skills</span>
+                </div>
+            </div>
+        </div>
+        <div class="box8">
+            <div class="box8lft">
+                <h2> Enterprise Suite</h2>
+                <h1>
+                    <span> This is how</span> <br>
+                    good companies <br>
+                    find good company. <br>
+                </h1>
+                <p>
+                    Access the top 1% of talent on Upwork, and a full suite of hybrid workforce <br>
+                    management tools. This is
+                    how innovation works now.
+                </p>
+
+                <ul>
+                    <li> Access expert talent to fill your skill gaps</li>
+                    <li> Control your workflow: hire, classify and pay your talent</li>
+                    <li> Partner with Upwork for end-to-end support</li>
+                </ul>
+
+                <button>Learn More</button>
+
+            </div>
+            <div class="box8rgt">
+                <img src="../assignment 1/images/chair.gif" alt="not found">
+            </div>
+        </div>
+        <div class="box9">
+            <div class="inbox9">
+                <h2>For clients</h2>
+                <br><br>
+                <h1 class="box9h">Find talent <br>
+                    your way</h1>
+                <p>
+                    Work with the largest network of independent <br>
+                    professionals and get things done—from quick <br>
+                    turnarounds to big transformations.
+                </p>
+            </div>
+            <div class="boxes">
+                <div class="bx1">
+                    <h1>Post a job <br>and hire a Pro</h1>
+                    <p>Talent Marketplace <sup>TM</sup> -> </p>
+                </div>
+                <div class="bx2">
+                    <h1>Browse and <br>buy projects</h1>
+                    <p>Project Catalog <sup>TM</sup> -> </p>
+                </div>
+                <div class="bx3">
+                    <h1>Get advise from an <br> industry expert</h1>
+                    <p>Consultations -></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
